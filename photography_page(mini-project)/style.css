@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+}
+
+.main-box {
+    background: url(background-photo.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.menu-btn i {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    left: 2rem;
+    top: 1rem;
+    line-height: 60px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.side-bar {
+    position: fixed;
+    left: -300px;
+    height: 100vh;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s linear;
+}
+
+.side-bar .logo {
+    position: absolute;
+    width: 100%;
+    line-height: 60px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
+    height: 60px;
+}
+
+.logo a {
+    position: absolute;
+    left: 50px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.close-btn i {
+    color: grey;
+    font-size: 25px;
+    position: absolute;
+    right: 10px;
+    line-height: 60px;
+    opacity: 0;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.side-bar .sidebar-menu {
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    color: white;
+}
+
+.sidebar-menu ul li {
+
+    margin-top: 6px;
+    padding: 15px 20px;
+}
+
+.sidebar-menu a,
+i {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.sidebar-menu i {
+    padding: 8px;
+}
+
+.social-media {
+    position: absolute;
+    left: 25%;
+    bottom: 50px;
+}
+
+.social-media i {
+    color: white;
+    opacity: 0.5;
+    padding: 0 5px;
+}
+
+#check {
+    display: none;
+}
+
+.sidebar-menu li:hover {
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+.menu-btn i:hover {
+    font-size: 40px;
+}
+
+.close-btn i:hover {
+    font-size: 30px;
+}
+.social-media i:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+#check:checked ~ .side-bar {
+    left: 0;
+}
+
+#check:checked ~ .menu-btn i {
+    opacity: 0;
+}
+
+#check:checked ~ .side-bar .close-btn i {
+    opacity: 1;
+}
